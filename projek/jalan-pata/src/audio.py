@@ -220,7 +220,7 @@ def beat_sfx(sfx, b, buf, duck):
     if b.get('stretch') and 'jeritan' not in s: A(slide_whistle(max(min(d, .8), .3)), t, -12)
 
 
-def build(part):
+def build(part, final=True):
     dur = part['dur']; N = int(SR * dur)
     climaxes = [bb['t0'] for bb in part['babak'] if 'M8' in bb['cam']]
     mus = music(dur, climaxes)
@@ -250,19 +250,27 @@ def build(part):
         for line in bb['lines']:
             for b in line:
                 beat_sfx(sfx, b, sfx, duck)
-    add(sfx, tada() if 'berhenti' not in ''.join(x['cam'] for x in bks) else glock(84, 1.4), cta + .1, -2)
+    if final:
+        add(sfx, tada() if 'berhenti' not in ''.join(x['cam'] for x in bks) else glock(84, 1.4), cta + .1, -2)
     dk = np.ones(N)
     for t, d in duck: dk[int(t * SR):int((t + d) * SR)] = 10 ** (-4 / 20)
     dk = np.convolve(dk, sm, 'same')
     mix = mus * dk * 0.8 + sfx
     f = np.ones(N); k = int(.25 * SR); f[-k:] = np.linspace(1, 0, k)
-    mix *= f
-    return mix / (np.max(np.abs(mix)) * 1.05)
+    if final: mix *= f
+    return mix
 
 
 if __name__ == '__main__':
     d, pid = sys.argv[1], int(sys.argv[2])
-    part = next(p for p in json.load(open(f'{d}/storyboard.json')) if p['id'] == pid)
-    m = build(part)
+    parts = json.load(open(f'{d}/storyboard.json'))
+    if pid == 0:   # gabung: each part at its offset, hard cut between, @handle sting only at the end
+        G = json.load(open(f'{d}/storyboard_gabung.json'))[0]
+        m = np.zeros(int(SR * G['dur']))
+        for i, (P, off) in enumerate(zip(parts, G['offsets'])):
+            add(m, build(P, final=(i == len(parts) - 1)), off)
+    else:
+        m = build(next(p for p in parts if p['id'] == pid))
+    m = m / (np.max(np.abs(m)) * 1.05)
     wavfile.write(f'{d}/mix{pid}.wav', SR, np.stack([m, m], 1).astype(np.float32))
     print('ok', pid, len(m) / SR)

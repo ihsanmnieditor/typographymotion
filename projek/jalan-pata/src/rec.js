@@ -2,7 +2,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
 const [dir, partId, out, scale, ...times] = process.argv.slice(2);
-const part = JSON.parse(fs.readFileSync(path.join(dir, 'storyboard.json'), 'utf8')).find(p => p.id == partId);
+const part = JSON.parse(fs.readFileSync(path.join(dir, process.env.SB || 'storyboard.json'), 'utf8')).find(p => p.id == partId);
 (async () => {
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: +scale });

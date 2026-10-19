@@ -62,7 +62,8 @@ window.build=function(part){
   PART=part; BK=[]; BEATS=[];
   const st=document.getElementById('stage');
   st.querySelectorAll('.babak').forEach(e=>e.remove());
-  document.getElementById('tag').textContent=`Bahagian ${part.id}/3`;
+  document.getElementById('tag').textContent=part.id?`Bahagian ${part.id}/3`:'';
+  document.getElementById('wm').textContent=part.wm||'PREVIEW v1';
   part.babak.forEach((bb,bi)=>{
     const layer=document.createElement('div'); layer.className='babak';
     const stack=document.createElement('div'); stack.className='stack'; layer.appendChild(stack);
@@ -104,7 +105,7 @@ function set(el,{o=1,x=0,y=0,s=1,sx=null,r=0,skew=0}){
   el.style.opacity=o;
   el.style.transform=`translate(${x}px,${y}px) rotate(${r}deg) skewX(${skew}deg) scale(${sx??s},${s})`;
 }
-function camType(bb){const c=bb.cam; return /M8/.test(c)?'rot':/KANAN/.test(c)?'h':'v';}
+function camType(bb){const c=bb.cam; return /M11/.test(c)?'cut':/M8/.test(c)?'rot':/KANAN/.test(c)?'h':'v';}
 function camTransform(type,u,dir,D){ // dir: +1 entering (u: 0→1 = arrive), -1 exiting (u: 0→1 = leave)
   const a = dir>0 ? 1-u : -u;  // offset fraction
   if(type==='h') return `translateX(${a*1120}px)`;
@@ -173,10 +174,12 @@ window.render=function(t){
     if(t<bb.t0){
       if(i===0) tf='none';
       else if(t<bb.t0-CAM) vis=false;
+      else if(camType(bb)==='cut') vis=t>=bb.t0-.05;
       else {const u=cubicIO(prog(t,bb.t0-CAM,CAM)); const D=960+Math.max(K.h,prev.h)/2+40; tf=camTransform(camType(bb),u,1,D);}
     } else if(t>bb.t1){
       if(!next) tf='none';
       else if(t>bb.t1+CAM) vis=false;
+      else if(camType(next.bb)==='cut') vis=false;
       else {const u=cubicIO(prog(t,bb.t1,CAM)); const D=960+Math.max(K.h,next.h)/2+40; tf=camTransform(camType(next.bb),u,-1,D);}
     }
     K.layer.style.display=vis?'block':'none'; K.layer.style.transform=tf;

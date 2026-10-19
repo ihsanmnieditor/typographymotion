@@ -48,7 +48,8 @@
 | Hanya satu @ihsanmni, di akhir | ✅ |
 | Semua 147 beat pada grid 1/8 beat (offset bahagian 29.25s & 57.75s, kedua-duanya gandaan 0.25s) | ✅ |
 | Peraturan font / warna / emoji | ✅ (tidak berubah dari v1). Emoji: 4 dalam 99s (had ≤ 19). |
-| Loudness | Lihat `RINGKASAN-TEKNIKAL` di bawah |
+| Loudness | ✅ **-14.0 LUFS**, true peak **-1.2 dBTP** |
+| Fail | 540×960, 30fps, H.264 + AAC 320 kbps, 99.0s, 7.2 MB (2,970 frame) |
 
 ---
 
