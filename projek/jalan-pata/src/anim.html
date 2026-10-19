@@ -63,7 +63,7 @@ window.build=function(part){
   const st=document.getElementById('stage');
   st.querySelectorAll('.babak').forEach(e=>e.remove());
   document.getElementById('tag').textContent=part.id?`Bahagian ${part.id}/3`:'';
-  document.getElementById('wm').textContent=part.wm||'PREVIEW v1';
+  document.getElementById('wm').textContent=part.wm ?? 'PREVIEW v1';
   part.babak.forEach((bb,bi)=>{
     const layer=document.createElement('div'); layer.className='babak';
     const stack=document.createElement('div'); stack.className='stack'; layer.appendChild(stack);
