@@ -220,7 +220,8 @@ def build():
             t += HOLD
             bb['t1'] = round(t, 2)
             t += CAM
-        P['dur'] = round(t - CAM + 0.7, 2)   # + end card / hard cut tail
+        P['cta'] = round(t - CAM, 2)          # hard cut to @handle
+        P['dur'] = round(t - CAM + 1.5, 2)    # + end card
         P['emoji'] = emo
         out.append(P)
     return out
