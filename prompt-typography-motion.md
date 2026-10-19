@@ -377,14 +377,15 @@ Contoh pengelasan semantik:
 | Dulu | Orang tua / tradisi | Libre Baskerville | `INK` | Fade perlahan | — |
 | aku | Penghubung | Inter Medium | `INK` | M3 | — |
 | SEDIH | Sedih | Cormorant Garamond Italic | `V-BLUE` | Huruf jatuh | 😢 kecil |
-| duit habis | Wang | Bebas Neue | `V-GREEN` | Count-down ke 0 | — |
+| duit habis | Wang | Bebas Neue (huruf besar sahaja) | `V-GREEN` | `habis`: warna mengalir keluar → outline | — |
 | kerja tak jadi | Larangan / negatif | Anton | `V-RED` | Pangkah dilukis | — |
 | TAPI | Tegas / kata kunci | Anton XL | `V-VIOLET` atas blok `V-LIME` | M5 → **M8 rotate** | — (klimaks) |
 | ibu | Perempuan | DM Serif Display Italic | `V-MAGENTA` | Slide lembut | — |
 | "sabar sayang" | Cinta | Pacifico | `V-PINK` | Write-on | — |
 | sekarang? | Soalan | Inter Bold Italic | `V-VIOLET` | `?` melantun | — |
-| Alhamdulillah | Tenang / lega | Quicksand Light | `V-CYAN` | Float | — |
-| RM5,000 | Wang | Bebas Neue XL | `V-GREEN` | Count-up | 💸 kecil |
+| Alhamdulillah | Tenang / lega | Quicksand Medium, saiz 1.4× (perkataan panjang) | `V-CYAN` | Float | — |
+| RM5,000 | Wang | Bebas Neue XL | `V-GREEN` | Count-up | — (kata XL) |
+| sebulan! | Wang | Bebas Neue | `V-GREEN` | M2 pop | 💸 kecil |
 | @namaanda | Asas | Inter Light | `INK` | M11 hard cut | — |
 
 Video ~12s, ada 2 emoji (≤ had 1 setiap 5s).
