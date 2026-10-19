@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts-local.css">
+<style>
+:root{--ink:#111;--blue:#1F4BFF;--violet:#7B2CFF;--magenta:#FF0F7B;--pink:#FF4FA3;--red:#FF2E3B;--green:#00A843;--cyan:#00A3FF;--orange:#FF5A00;--lime:#7FFE39;--yellow:#FFD400;}
+html,body{margin:0;background:#fff}
+#stage{width:1080px;height:1920px;position:relative;overflow:hidden;background:#fff}
+#stack{position:absolute;left:86px;right:86px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column}
+.line{display:flex;align-items:baseline;width:max-content;white-space:nowrap;line-height:.98}
+.b+.b{margin-left:.25em}
+.line.r{align-self:flex-end;transform-origin:right center}
+.b{position:relative;display:inline-flex;align-items:baseline;gap:.12em}
+.S{font-size:96px}.M{font-size:185px}.XL{font-size:370px}
+.asas,.asasI{font-family:Inter;font-weight:500;color:var(--ink)}
+.asasI{font-style:italic}
+.info{font-family:Inter;font-weight:900;letter-spacing:-.02em}
+.tempat{font-family:Inter;font-weight:900;color:var(--blue);letter-spacing:-.02em}
+.santai,.tenang{font-family:Quicksand;font-weight:600;color:var(--cyan);letter-spacing:-.01em}
+.nombor{font-family:'Bebas Neue';color:var(--green)}
+.larangan,.marah,.kunci{font-family:Anton;letter-spacing:.01em}
+.larangan,.marah{color:var(--red)}
+.marah,.kunci{text-transform:uppercase}
+.kunci{color:var(--violet);background:var(--lime);padding:0 .12em;transform:rotate(-2deg)}
+.lucu{font-family:Bangers;color:var(--orange);letter-spacing:.03em}
+.soalan{font-family:Inter;font-weight:700;font-style:italic;color:var(--violet);letter-spacing:-.02em}
+.positif{font-family:Inter;font-weight:900;color:var(--green);letter-spacing:-.02em}
+.cemas{font-family:'Special Elite';color:var(--violet)}
+.terkejut{font-family:Rubik;font-weight:900;color:var(--ink);background:var(--yellow);padding:0 .12em;transform:rotate(1.5deg)}
+.bisikan{font-family:Inter;font-weight:300;font-style:italic;color:rgba(17,17,17,.6);letter-spacing:.04em}
+.stretch{letter-spacing:.05em}
+.strike::after{content:"";position:absolute;left:-4%;right:-4%;top:52%;height:.09em;background:var(--ink);border-radius:1em;transform:rotate(-5deg)}
+.emoji{font-family:'Noto Color Emoji';font-size:.45em;align-self:flex-start;margin-top:.05em}
+svg.deco{height:.7em;width:1.1em;overflow:visible;flex:none}
+svg.deco.lanes{height:.9em;width:1em}
+#wm{position:absolute;right:40px;bottom:36px;font:600 30px Inter;color:rgba(17,17,17,.35);letter-spacing:2px}
+#tag{position:absolute;left:40px;top:36px;font:600 30px Inter;color:rgba(17,17,17,.35)}
+</style></head><body>
+<div id="stage"><div id="stack"></div><div id="tag"></div><div id="wm">STORYBOARD v1</div></div>
+<script>
+const COL={'V-BLUE':'--blue','V-ORANGE':'--orange','V-MAGENTA':'--magenta','V-VIOLET':'--violet','V-GREEN':'--green','V-RED':'--red','V-CYAN':'--cyan','INK':'--ink'};
+const arrow=(dir,c)=>`<svg class="deco" viewBox="0 0 100 60"><path d="${dir==='L'?'M95 30 H12 M35 6 L10 30 L35 54':'M5 30 H88 M65 6 L90 30 L65 54'}" stroke="${c}" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const lanes=`<svg class="deco lanes" viewBox="0 0 120 100"><path d="M10 0 V100 M110 0 V100" stroke="#111" stroke-width="8"/><path d="M60 0 V100" stroke="#111" stroke-width="8" stroke-dasharray="18 14"/></svg>`;
+const check=`<svg class="deco" style="width:1em" viewBox="0 0 100 80"><path d="M8 42 L36 70 L94 8" stroke="var(--green)" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+window.show=function(bb,tag){
+  const st=document.getElementById('stack'); st.innerHTML='';
+  document.getElementById('tag').textContent=tag;
+  bb.lines.forEach((line,i)=>{
+    const L=document.createElement('div'); L.className='line'+(i%2?' r':'');
+    line.forEach(b=>{
+      const s=document.createElement('span');
+      s.className=`b ${b.sty} ${b.size}`+(b.stretch?' stretch':'')+(b.strike?' strike':'');
+      if(b.color){s.style.color=`var(${COL[b.color]})`;}
+      const c=getComputedStyle(document.documentElement).getPropertyValue(COL[b.col]||'--ink');
+      let h='';
+      if(b.arrow==='L') h+=arrow('L',c);
+      h+=`<span>${b.text}</span>`;
+      if(b.arrow==='R') h+=arrow('R',c);
+      if(b.lanes) h+=lanes;
+      if(b.check) h+=check;
+      if(b.emoji) h+=`<span class="emoji">${b.emoji}</span>`;
+      s.innerHTML=h; L.appendChild(s);
+    });
+    st.appendChild(L);
+  });
+  // fit each line into safe width (908px)
+  [...st.children].forEach(L=>{const w=L.getBoundingClientRect().width; if(w>908){const k=908/w; L.style.fontSize=''; L.querySelectorAll('.b').forEach(b=>{b.style.fontSize=(parseFloat(getComputedStyle(b).fontSize)*k)+'px'});}});
+  const h=st.scrollHeight; return {h, over:h>1920*0.80};
+};
+</script>
+</body></html>
