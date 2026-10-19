@@ -1,0 +1,168 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts-local.css">
+<style>
+:root{--ink:#111;--blue:#1F4BFF;--violet:#7B2CFF;--magenta:#FF0F7B;--pink:#FF4FA3;--red:#FF2E3B;--green:#00A843;--cyan:#00A3FF;--lime:#7FFE39;}
+html,body{margin:0;background:#fff}
+#stage{width:1080px;height:1920px;position:relative;overflow:hidden;background:#fff}
+.layer{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:0 0}
+.w{position:absolute;white-space:nowrap;line-height:1;will-change:transform,opacity}
+.emoji{font-family:'Noto Color Emoji';position:absolute;line-height:1}
+.inter{font-family:'Inter'}
+.lb{font-family:'Libre Baskerville'}
+.cg{font-family:'Cormorant Garamond';font-style:italic;font-weight:600}
+.bebas{font-family:'Bebas Neue'}
+.anton{font-family:'Anton'}
+.dms{font-family:'DM Serif Display';font-style:italic}
+.pac{font-family:'Pacifico'}
+.qs{font-family:'Quicksand';font-weight:500}
+.ch{display:inline-block}
+svg{position:absolute;left:0;top:0;overflow:visible}
+#wm{position:absolute;right:40px;bottom:36px;font:600 30px Inter;color:rgba(17,17,17,.35);letter-spacing:2px}
+</style></head><body>
+<div id="stage">
+  <!-- W1: babak 1–3 (koordinat dunia) -->
+  <div class="layer" id="W1">
+    <div class="w lb" id="dulu" style="left:110px;top:600px;font-size:190px;color:var(--ink)">Dulu</div>
+    <div class="w inter" id="aku" style="left:640px;top:690px;font-size:100px;font-weight:500;color:var(--ink)">aku</div>
+    <div class="w cg" id="sedih" style="left:80px;top:770px;font-size:330px;color:rgba(31,75,255,.85);letter-spacing:-6px"></div>
+    <div class="emoji" id="cry" style="left:905px;top:790px;font-size:80px">😢</div>
+    <div class="w inter" id="sangat" style="right:110px;top:1130px;font-size:100px;font-weight:500;font-style:italic;color:var(--ink)">sangat</div>
+
+    <div class="w bebas" id="duit" style="left:100px;top:1310px;font-size:220px;color:var(--green)">duit</div>
+    <div class="w bebas" id="habisO" style="right:100px;top:1480px;font-size:440px;color:transparent;-webkit-text-stroke:7px var(--green);letter-spacing:4px">habis</div>
+    <div class="w bebas" id="habisF" style="right:100px;top:1480px;font-size:440px;color:var(--green);-webkit-text-stroke:7px var(--green);letter-spacing:4px">habis</div>
+    <div class="w inter" id="kerja" style="left:100px;top:1980px;font-size:100px;font-weight:700;color:var(--ink)">kerja</div>
+    <div class="w anton" id="takjadi" style="left:100px;top:2090px;font-size:220px;color:var(--red);transform-origin:20% 60%">tak jadi</div>
+    <svg width="1080" height="3600"><path id="strike" d="M80 2200 C 320 2170, 620 2162, 900 2114" stroke="#111" stroke-width="16" stroke-linecap="round" fill="none"/></svg>
+
+    <div id="lime" style="position:absolute;left:70px;top:2820px;width:940px;height:600px;background:var(--lime);transform-origin:0 50%"></div>
+    <div class="w anton" id="tapi" style="left:120px;top:2740px;font-size:520px;color:var(--violet);letter-spacing:6px;transform-origin:50% 60%">TAPI</div>
+  </div>
+
+  <!-- W2: babak 4–5 -->
+  <div class="layer" id="W2">
+    <div class="w dms" id="ibu" style="left:560px;top:640px;font-size:240px;color:var(--magenta)">ibu</div>
+    <div class="w inter" id="cakap" style="left:570px;top:930px;font-size:100px;font-weight:500;font-style:italic;color:var(--ink)">cakap<span id="d1">.</span><span id="d2">.</span><span id="d3">.</span></div>
+    <div class="w pac" id="sabar" style="left:540px;top:1070px;font-size:210px;color:var(--pink)">“sabar</div>
+    <div class="w pac" id="sayang" style="right:-350px;top:1320px;font-size:210px;color:var(--pink)">sayang”</div>
+
+    <div class="w inter" id="sekarang" style="left:540px;top:2130px;font-size:150px;font-weight:700;font-style:italic;color:var(--violet);letter-spacing:-3px;transform-origin:0 100%">sekarang<span id="q" style="font-size:200px;display:inline-block">?</span></div>
+    <div class="w qs" id="alham" style="left:540px;top:2380px;font-size:140px;color:var(--cyan);letter-spacing:-2px">Alhamdulillah</div>
+    <div class="w bebas" id="rm" style="left:535px;top:2560px;font-size:330px;color:var(--green);transform-origin:0 60%">RM5,000</div>
+    <div class="w bebas" id="sebulan" style="right:-190px;top:2980px;font-size:200px;color:var(--green);transform-origin:50% 60%">sebulan!</div>
+    <div class="emoji" id="cash" style="right:-320px;top:2995px;font-size:95px">💸</div>
+  </div>
+
+  <div class="layer" id="CTA" style="display:none">
+    <div class="w inter" style="left:0;right:0;text-align:center;top:900px;font-size:100px;font-weight:300;color:var(--ink)">@namaanda</div>
+  </div>
+  <div id="wm">PREVIEW v1</div>
+</div>
+<script>
+// ---------- easing ----------
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const expoOut=x=>x>=1?1:1-Math.pow(2,-10*x);
+const sineIO=x=>-(Math.cos(Math.PI*x)-1)/2;
+const backOut=x=>{const c1=2.2,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const prog=(t,t0,d)=>clamp((t-t0)/d);
+const lerp=(a,b,k)=>a+(b-a)*k;
+const $=id=>document.getElementById(id);
+
+// split SEDIH into letters
+$('sedih').innerHTML=[...'SEDIH'].map(c=>`<span class="ch">${c}</span>`).join('');
+const sedihCh=[...$('sedih').children];
+const strike=$('strike'); const SL=strike.getTotalLength();
+strike.style.strokeDasharray=SL;
+
+function set(el,{o=1,x=0,y=0,s=1,sx=null,r=0,skew=0}){
+  el.style.opacity=o;
+  el.style.transform=`translate(${x}px,${y}px) rotate(${r}deg) skewX(${skew}deg) scale(${sx??s},${s})`;
+}
+// generic in-animations
+const fadeUp=(el,t,t0,d=.28,dy=60,ease=expoOut)=>{const k=ease(prog(t,t0,d));set(el,{o:k,y:(1-k)*dy});};
+const popIn=(el,t,t0,d=.22)=>{const p=prog(t,t0,d);set(el,{o:clamp(p*4),s:p<=0?0:backOut(p)});};
+
+// camera
+function camY1(t){ // babak 1–3 pan
+  if(t<2.85) return 0;
+  if(t<5.05) return lerp(0,1080,expoOut(prog(t,2.85,.4)));
+  return lerp(1080,2180,sineIO(prog(t,5.05,.35)));
+}
+function pan2(t){ // after rotation
+  const a=expoOut(prog(t,7.5,.4)), b=expoOut(prog(t,8.7,.3));
+  return {x:-440*a, y:-150*a-1500*b};
+}
+
+window.render=function(t){
+  const cta=t>=11.5, cut=t>=11.4;
+  $('W1').style.display=$('W2').style.display=cut?'none':'block';
+  $('CTA').style.display=cta?'block':'none';
+  if(cut) return;
+
+  // ---- W1 transform (pan, then rotate 90°) ----
+  const P2=pan2(t);
+  if(t<6.0){
+    $('W1').style.transform=`translate(0px,${-camY1(t)}px)`;
+  }else{
+    const k=expoOut(prog(t,6.0,.45));
+    const px=lerp(540,30,k)+P2.x, py=lerp(860,960,k)+P2.y;
+    $('W1').style.transform=`translate(${px}px,${py}px) rotate(${-90*k}deg) translate(-540px,-3040px)`;
+  }
+  $('W2').style.transform=`translate(${P2.x}px,${P2.y}px)`;
+
+  // ---- Babak 1 ----
+  {const k=sineIO(prog(t,.30,.6)); set($('dulu'),{o:k,y:(1-k)*24});}
+  fadeUp($('aku'),t,.90);
+  sedihCh.forEach((c,i)=>{const p=prog(t,1.50+i*.06,.45);const k=sineIO(p);
+    set(c,{o:clamp(p*2),y:(1-k)*-70,r:(1-k)*(i%2?6:-6)});});
+  { // emoji: pop + wiggle
+    const p=prog(t,2.10,.22); const w=Math.sin((t-2.1)*5)*2;
+    set($('cry'),{o:clamp(p*4),s:p<=0?0:backOut(p),r:-6+(p>=1?w:0)});
+  }
+  fadeUp($('sangat'),t,2.40,.4,40,sineIO);
+
+  // ---- Babak 2 ----
+  {const p=prog(t,3.30,.18);const k=backOut(p);set($('duit'),{o:clamp(p*3),y:(1-k)*-180,s:lerp(1.25,1,clamp(p))});}
+  {const p=prog(t,3.60,.15);const k=backOut(p);
+    set($('habisO'),{o:clamp(p*3),s:p<=0?.8:lerp(.8,1,k)});
+    set($('habisF'),{o:clamp(p*3),s:p<=0?.8:lerp(.8,1,k)});
+    const d=sineIO(prog(t,3.75,.5))*100; $('habisF').style.clipPath=`inset(${d}% 0 0 0)`;}
+  fadeUp($('kerja'),t,4.20);
+  popIn($('takjadi'),t,4.50);
+  strike.style.strokeDashoffset=SL*(1-expoOut(prog(t,4.70,.4)));
+  strike.style.opacity=t>=4.70?1:0;
+
+  // ---- Babak 3: TAPI ----
+  {const p=prog(t,5.40,.18); const k=expoOut(p);
+    $('lime').style.opacity=p>0?1:0;
+    $('lime').style.transform=`rotate(-3deg) scaleX(${k})`;
+    set($('tapi'),{o:p>0?1:0,s:lerp(1.35,1,k)});
+    const flash=t>=5.60&&t<5.67;
+    $('tapi').style.color=flash?'var(--lime)':'var(--violet)';
+    $('lime').style.background=flash?'var(--violet)':'var(--lime)';}
+
+  // ---- Babak 4 ----
+  {const k=sineIO(prog(t,6.60,.5)); set($('ibu'),{o:k,x:(1-k)*90});}
+  fadeUp($('cakap'),t,7.05);
+  ['d1','d2','d3'].forEach((d,i)=>$(d).style.opacity=t>=7.20+i*.1?1:0);
+  {const a=prog(t,7.80,.4), b=prog(t,8.20,.4);
+    $('sabar').style.opacity=a>0?1:0; $('sabar').style.clipPath=`inset(-20% ${100-sineIO(a)*100}% -20% 0)`;
+    $('sayang').style.opacity=b>0?1:0; $('sayang').style.clipPath=`inset(-20% ${100-sineIO(b)*100}% -20% 0)`;}
+
+  // ---- Babak 5 ----
+  {const k=expoOut(prog(t,9.00,.3)); set($('sekarang'),{o:k,x:(1-k)*-90,skew:(1-k)*-20});
+    const q=t-9.20; const bounce=q>0?-Math.abs(Math.sin(q*14))*60*Math.exp(-q*5):0;
+    $('q').style.transform=`translateY(${bounce-14}px) rotate(12deg)`;}
+  {const k=sineIO(prog(t,9.60,.6)); set($('alham'),{o:k,y:(1-k)*50});}
+  {const p=prog(t,10.20,.5); const n=Math.round(expoOut(p)*5000/50)*50;
+    $('rm').textContent='RM'+n.toLocaleString('en-US');
+    const pp=prog(t,10.20,.15); set($('rm'),{o:clamp(pp*4),s:pp<=0?.6:lerp(.6,1,backOut(pp))});
+    if(t>=10.70&&t<10.85){const kk=1+.06*Math.sin(prog(t,10.70,.15)*Math.PI);set($('rm'),{s:kk});}}
+  popIn($('sebulan'),t,10.80);
+  {const p=prog(t,11.00,.22); const w=Math.sin((t-11)*6)*2;
+    set($('cash'),{o:clamp(p*4),s:p<=0?0:backOut(p),r:8+(p>=1?w:0)});}
+};
+window.render(0);
+</script>
+</body></html>
