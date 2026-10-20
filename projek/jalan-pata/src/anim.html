@@ -1,0 +1,190 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts-local.css">
+<style>
+:root{--ink:#111;--blue:#1F4BFF;--violet:#7B2CFF;--magenta:#FF0F7B;--green:#00A843;--cyan:#00A3FF;--orange:#FF5A00;--red:#FF2E3B;--lime:#7FFE39;--yellow:#FFD400;}
+html,body{margin:0;background:#fff}
+#stage{width:1080px;height:1920px;position:relative;overflow:hidden;background:#fff}
+.babak{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px;will-change:transform}
+.stack{position:absolute;left:86px;right:86px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column}
+.line{display:flex;align-items:baseline;width:max-content;white-space:nowrap;line-height:.98}
+.line.r{align-self:flex-end}
+.b{position:relative;display:inline-flex;align-items:baseline;gap:.12em;opacity:0;will-change:transform,opacity}
+.b+.b{margin-left:.25em}
+.txt,.q,.ch{display:inline-block}
+.S{font-size:96px}.M{font-size:185px}.XL{font-size:370px}
+.asas{font-family:Inter;font-weight:500;color:var(--ink)}
+.info{font-family:Inter;font-weight:900;letter-spacing:-.02em}
+.tempat{font-family:Inter;font-weight:900;color:var(--blue);letter-spacing:-.02em}
+.santai,.tenang{font-family:Quicksand;font-weight:600;color:var(--cyan);letter-spacing:-.01em}
+.nombor{font-family:'Bebas Neue';color:var(--green)}
+.larangan,.marah,.kunci{font-family:Anton;letter-spacing:.01em}
+.larangan,.marah{color:var(--red)}
+.marah,.kunci{text-transform:uppercase}
+.kunci{color:var(--violet);background:var(--lime);padding:0 .12em}
+.lucu{font-family:Bangers;color:var(--orange);letter-spacing:.03em}
+.soalan{font-family:Inter;font-weight:700;font-style:italic;color:var(--violet);letter-spacing:-.02em}
+.positif{font-family:Inter;font-weight:900;color:var(--green);letter-spacing:-.02em}
+.cemas{font-family:'Special Elite';color:var(--violet)}
+.terkejut{font-family:Rubik;font-weight:900;color:var(--ink);background:var(--yellow);padding:0 .12em}
+.bisikan{font-family:Inter;font-weight:300;font-style:italic;color:rgba(17,17,17,.6);letter-spacing:.04em}
+.stretch{letter-spacing:.05em}
+.strike::after{content:"";position:absolute;left:-4%;right:-4%;top:52%;height:.09em;background:var(--ink);border-radius:1em;transform-origin:left center;transform:rotate(-5deg) scaleX(var(--s,0))}
+.emoji{font-family:'Noto Color Emoji';font-size:.45em;align-self:flex-start;margin-top:.05em;display:inline-block;opacity:0}
+svg.deco{height:.7em;width:1.1em;overflow:visible;flex:none}
+svg.deco.lanes{height:.9em;width:1em}
+#cta{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font:300 100px Inter;color:var(--ink);display:none}
+#wm{position:absolute;right:40px;bottom:36px;font:600 30px Inter;color:rgba(17,17,17,.35);letter-spacing:2px}
+#tag{position:absolute;left:40px;top:36px;font:600 30px Inter;color:rgba(17,17,17,.35)}
+</style></head><body>
+<div id="stage"><div id="cta">@ihsanmni</div><div id="tag"></div><div id="wm">PREVIEW v1</div></div>
+<script>
+const CAM=.5;
+const COL={'V-BLUE':'--blue','V-ORANGE':'--orange','V-MAGENTA':'--magenta','V-VIOLET':'--violet','V-GREEN':'--green','V-RED':'--red','V-CYAN':'--cyan','INK':'--ink','INK 60%':'--ink'};
+const cssv=v=>getComputedStyle(document.documentElement).getPropertyValue(v);
+const arrow=(dir,c)=>`<svg class="deco" viewBox="0 0 100 60"><path pathLength="1" d="${dir==='L'?'M95 30 H12 M35 6 L10 30 L35 54':'M5 30 H88 M65 6 L90 30 L65 54'}" stroke="${c}" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const lanes=`<svg class="deco lanes" viewBox="0 0 120 100"><path pathLength="1" d="M10 0 V100" stroke="#111" stroke-width="8"/><path pathLength="1" d="M110 0 V100" stroke="#111" stroke-width="8"/><path d="M60 0 V100" stroke="#111" stroke-width="8" stroke-dasharray="18 14" class="dash"/></svg>`;
+const check=`<svg class="deco" style="width:1em" viewBox="0 0 100 80"><path pathLength="1" d="M8 42 L36 70 L94 8" stroke="var(--green)" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// easing
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const expoOut=x=>x>=1?1:1-Math.pow(2,-10*x);
+const sineIO=x=>-(Math.cos(Math.PI*x)-1)/2;
+const cubicIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const backOut=x=>{const c1=2.2,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const prog=(t,t0,d)=>clamp((t-t0)/d);
+const nz=(t,s)=>Math.sin(t*91.7+s)*Math.sin(t*37.3+s*2.1);
+
+let PART=null, BK=[], BEATS=[];
+const TYPE=b=>/M1 typewriter|Typewriter|perlahan \(menunggu\)|Pop satu-satu/.test(b.motion)||b.sty==='bisikan';
+
+window.build=function(part){
+  PART=part; BK=[]; BEATS=[];
+  const st=document.getElementById('stage');
+  st.querySelectorAll('.babak').forEach(e=>e.remove());
+  document.getElementById('tag').textContent=part.id?`Bahagian ${part.id}/3`:'';
+  document.getElementById('wm').textContent=part.wm ?? 'PREVIEW v1';
+  part.babak.forEach((bb,bi)=>{
+    const layer=document.createElement('div'); layer.className='babak';
+    const stack=document.createElement('div'); stack.className='stack'; layer.appendChild(stack);
+    bb.lines.forEach((line,i)=>{
+      const L=document.createElement('div'); L.className='line'+(i%2?' r':'');
+      line.forEach(b=>{
+        const s=document.createElement('span');
+        s.className=`b ${b.sty} ${b.size}`+(b.stretch?' stretch':'')+(b.strike?' strike':'');
+        if(b.color) s.style.color=`var(${COL[b.color]})`;
+        const c=cssv(COL[b.col]||'--ink');
+        let inner=b.text;
+        if(TYPE(b)) inner=[...b.text].map(ch=>`<span class="ch">${ch===' '?'&nbsp;':ch}</span>`).join('');
+        else inner=inner.replace(/\?/g,'<span class="q">?</span>');
+        let h='';
+        if(b.arrow==='L') h+=arrow('L',c);
+        h+=`<span class="txt">${inner}</span>`;
+        if(b.arrow==='R') h+=arrow('R',c);
+        if(b.lanes) h+=lanes;
+        if(b.check) h+=check;
+        if(b.emoji) h+=`<span class="emoji">${b.emoji}</span>`;
+        s.innerHTML=h; L.appendChild(s);
+        BEATS.push({b,el:s,bi,txt:s.querySelector('.txt'),chars:[...s.querySelectorAll('.ch')],qs:[...s.querySelectorAll('.q')],paths:[...s.querySelectorAll('path[pathLength]')],dash:s.querySelector('.dash'),emoji:s.querySelector('.emoji')});
+      });
+      stack.appendChild(L);
+    });
+    st.insertBefore(layer,document.getElementById('cta'));
+    BK.push({bb,layer,stack});
+  });
+};
+window.fit=function(){
+  BK.forEach(k=>{[...k.stack.children].forEach(L=>{
+    L.querySelectorAll('.b').forEach(b=>b.style.fontSize='');
+    const w=L.getBoundingClientRect().width;
+    if(w>908){const f=908/w; L.querySelectorAll('.b').forEach(b=>{b.style.fontSize=(parseFloat(getComputedStyle(b).fontSize)*f)+'px'});}
+  }); k.h=k.stack.getBoundingClientRect().height;});
+};
+
+function set(el,{o=1,x=0,y=0,s=1,sx=null,r=0,skew=0}){
+  el.style.opacity=o;
+  el.style.transform=`translate(${x}px,${y}px) rotate(${r}deg) skewX(${skew}deg) scale(${sx??s},${s})`;
+}
+function camType(bb){const c=bb.cam; return /M11/.test(c)?'cut':/M8/.test(c)?'rot':/KANAN/.test(c)?'h':'v';}
+function camTransform(type,u,dir,D){ // dir: +1 entering (u: 0→1 = arrive), -1 exiting (u: 0→1 = leave)
+  const a = dir>0 ? 1-u : -u;  // offset fraction
+  if(type==='h') return `translateX(${a*1120}px)`;
+  if(type==='rot') return `translateX(${a*900}px) rotate(${a*90}deg) scale(${1-.3*Math.abs(a)})`;
+  return `translateY(${a*D}px)`;
+}
+
+function animBeat(B,t){
+  const b=B.b, el=B.el, p=t-b.t, d=b.d;
+  if(p<0){el.style.opacity=0; if(B.emoji) B.emoji.style.opacity=0; return;}
+  const k=prog(t,b.t,Math.min(.3,d)), m=b.motion||'';
+  let o=1,x=0,y=0,s=1,sx=null,r=0,skew=0;
+  el.style.textShadow='none';
+  if(TYPE(b)){ // typewriter: reveal chars across the beat
+    const n=B.chars.length, shown=Math.floor(clamp(p/(d*.85))*n+ (p>0?1:0));
+    B.chars.forEach((c,i)=>c.style.visibility=i<shown?'visible':'hidden');
+  } else switch(b.sty){
+    case 'asas': {const e=expoOut(k); o=e; y=(1-e)*50; break;}
+    case 'info': case 'tempat': {
+      if(/Berkelip/.test(m)){ o = (p<.12||(p>.24&&p<.36)||p>.48)?1:0.15; }
+      else if(/flip/.test(m)){ const e=expoOut(prog(t,b.t,.4)); sx=lerp(-1,1,e); o=clamp(p*6); }
+      else if(/belakang/.test(m)){ const e=backOut(prog(t,b.t,.35)); s=lerp(.3,1,e); o=clamp(p*5); }
+      else if(/Membesar/.test(m)){ const e=backOut(prog(t,b.t,.4)); s=lerp(.5,1,e); o=clamp(p*6); }
+      else if(/squeeze/.test(m)){ const e=expoOut(prog(t,b.t,.45)); sx=lerp(1.3,.82,e); o=clamp(p*6); }
+      else if(b.sty==='tempat'||/M2/.test(m)){ const e=backOut(prog(t,b.t,.22)); s=p<=0?0:e; o=clamp(p*5); }
+      else {const e=expoOut(k); o=e; y=(1-e)*60;}
+      break;}
+    case 'santai': case 'tenang': {const e=sineIO(prog(t,b.t,.6)); o=e; y=(1-e)*45+Math.sin(p*2.4)*4*e; break;}
+    case 'nombor': case 'kunci': {
+      const e=expoOut(prog(t,b.t,.2)); s=lerp(1.35,1,e); o=clamp(p*8);
+      if(b.sty==='kunci') el.style.clipPath=`inset(-10% ${100-expoOut(prog(t,b.t,.16))*100}% -10% 0)`;
+      break;}
+    case 'larangan': {const e=backOut(prog(t,b.t,.22)); s=e; o=clamp(p*5);
+      el.style.setProperty('--s',expoOut(prog(t,b.t+.25,.35))); break;}
+    case 'marah': {const e=backOut(prog(t,b.t,.18)); s=lerp(.6,1,e); o=clamp(p*6);
+      const sh=Math.exp(-p*5)*14; x=nz(t,1)*sh; y=nz(t,7)*sh; r=nz(t,3)*sh*.15;
+      if(p<.12) el.style.textShadow='7px 0 rgba(0,229,255,.75), -7px 0 rgba(255,0,90,.75)'; break;}
+    case 'lucu': {const e=backOut(prog(t,b.t,.22)); s=e; o=clamp(p*5); r=Math.sin(p*14)*7*Math.exp(-p*3.5); break;}
+    case 'soalan': {const e=expoOut(prog(t,b.t,.3)); o=e; x=(1-e)*-70; skew=(1-e)*-20;
+      B.qs.forEach(q=>{const qq=p-.2; q.style.transform=`translateY(${qq>0?-Math.abs(Math.sin(qq*14))*.25*parseFloat(getComputedStyle(el).fontSize)*Math.exp(-qq*5):0}px)`;}); break;}
+    case 'positif': {const e=backOut(prog(t,b.t,.22)); s=e; o=clamp(p*5); break;}
+    case 'cemas': {o=(p<.35)?(nz(t,5)>-.2?1:.25):1; x=nz(t,2)*3; y=nz(t,4)*3; break;}
+    case 'terkejut': {const e=expoOut(prog(t,b.t,.15)); s=lerp(1.6,1,e); o=clamp(p*8); x=nz(t,9)*Math.exp(-p*8)*10; break;}
+    default: {const e=expoOut(k); o=e; y=(1-e)*50;}
+  }
+  if(b.stretch && !TYPE(b)){ // M12: letters pulled long
+    const e=sineIO(prog(t,b.t,Math.max(.3,d*.9)));
+    B.txt.style.letterSpacing=`${lerp(-.06,.05,e)}em`;
+  }
+  if(TYPE(b)){ o=1; }
+  set(el,{o,x,y,s,sx,r,skew});
+  // decorations
+  B.paths.forEach(pt=>{pt.style.strokeDasharray=1; pt.style.strokeDashoffset=1-expoOut(prog(t,b.t+.15,.4));});
+  if(B.dash) B.dash.style.opacity=prog(t,b.t+.35,.2);
+  if(B.emoji){const te=b.t+Math.min(d,.35); const pe=prog(t,te,.22);
+    B.emoji.style.opacity=pe>0?1:0; B.emoji.style.transform=`scale(${pe>0?backOut(pe):0}) rotate(${-6+Math.sin((t-te)*5)*3}deg)`;}
+}
+const lerp=(a,b,k)=>a+(b-a)*k;
+
+window.render=function(t){
+  const cut=t>=PART.cta;
+  document.getElementById('cta').style.display=t>=PART.cta+.1?'block':'none';
+  BK.forEach((K,i)=>{
+    const bb=K.bb; let vis=!cut, tf='none';
+    const prev=BK[i-1], next=BK[i+1];
+    if(t<bb.t0){
+      if(i===0) tf='none';
+      else if(t<bb.t0-CAM) vis=false;
+      else if(camType(bb)==='cut') vis=t>=bb.t0-.05;
+      else {const u=cubicIO(prog(t,bb.t0-CAM,CAM)); const D=960+Math.max(K.h,prev.h)/2+40; tf=camTransform(camType(bb),u,1,D);}
+    } else if(t>bb.t1){
+      if(!next) tf='none';
+      else if(t>bb.t1+CAM) vis=false;
+      else if(camType(next.bb)==='cut') vis=false;
+      else {const u=cubicIO(prog(t,bb.t1,CAM)); const D=960+Math.max(K.h,next.h)/2+40; tf=camTransform(camType(next.bb),u,-1,D);}
+    }
+    K.layer.style.display=vis?'block':'none'; K.layer.style.transform=tf;
+  });
+  BEATS.forEach(B=>{ if(BK[B.bi].layer.style.display!=='none') animBeat(B,t); });
+};
+</script>
+</body></html>

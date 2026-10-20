@@ -1,0 +1,2318 @@
+[
+ {
+  "id": 0,
+  "title": "Gabung (1+2+3)",
+  "mood": "Nasihat santai → geram → Merayu → marah → serius (nyawa) → Terkejut → istighfar (ironi) → sindir → meletup",
+  "babak": [
+   {
+    "id": "1.1",
+    "cam": "Mula (statik)",
+    "lines": [
+     [
+      {
+       "text": "Sdkit pesanan",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "motion": "M1 typewriter",
+       "sfx": "tick setiap huruf",
+       "t": 0.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE"
+      }
+     ],
+     [
+      {
+       "text": "untuk",
+       "sty": "asas",
+       "size": "S",
+       "t": 0.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "kwn²",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "t": 1.25,
+       "d": 0.25,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "atau",
+       "sty": "asas",
+       "size": "S",
+       "t": 1.5,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "kenalan.",
+       "sty": "info",
+       "size": "M",
+       "color": "V-MAGENTA",
+       "t": 1.75,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-MAGENTA",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ]
+    ],
+    "t0": 0.25,
+    "t1": 2.5
+   },
+   {
+    "id": "1.2",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "jln pata",
+       "sty": "tempat",
+       "size": "M",
+       "t": 3.0,
+       "d": 0.5,
+       "cat": "Tempat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M2 pop",
+       "sfx": "pop"
+      }
+     ],
+     [
+      {
+       "text": "seb takir",
+       "sty": "tempat",
+       "size": "M",
+       "t": 3.5,
+       "d": 0.5,
+       "cat": "Tempat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M2 pop",
+       "sfx": "pop"
+      },
+      {
+       "text": "tuuu,",
+       "sty": "asas",
+       "size": "S",
+       "stretch": true,
+       "t": 4.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "ye",
+       "sty": "asas",
+       "size": "S",
+       "t": 4.5,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "2",
+       "sty": "nombor",
+       "size": "XL",
+       "lanes": true,
+       "sfx": "bass hit + 2 garisan lorong dilukis",
+       "t": 4.75,
+       "d": 0.75,
+       "cat": "Nombor",
+       "font": "Bebas Neue",
+       "col": "V-GREEN",
+       "motion": "M5 scale XL"
+      }
+     ],
+     [
+      {
+       "text": "lorong",
+       "sty": "nombor",
+       "size": "M",
+       "t": 5.5,
+       "d": 0.5,
+       "cat": "Nombor",
+       "font": "Bebas Neue",
+       "col": "V-GREEN",
+       "motion": "M5 scale XL",
+       "sfx": "bass hit"
+      },
+      {
+       "text": "yee.",
+       "sty": "asas",
+       "size": "S",
+       "stretch": true,
+       "t": 6.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "soft swipe"
+      }
+     ]
+    ],
+    "t0": 3.0,
+    "t1": 6.75
+   },
+   {
+    "id": "1.3",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "klau rasa nk",
+       "sty": "asas",
+       "size": "S",
+       "t": 7.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "santai²",
+       "sty": "santai",
+       "size": "M",
+       "t": 7.75,
+       "d": 0.5,
+       "cat": "Santai / alam",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float naik",
+       "sfx": "angin lembut"
+      }
+     ],
+     [
+      {
+       "text": "layan",
+       "sty": "asas",
+       "size": "S",
+       "t": 8.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "angin pata,",
+       "sty": "santai",
+       "size": "M",
+       "emoji": "🌊",
+       "t": 8.75,
+       "d": 0.5,
+       "cat": "Santai / alam",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float naik",
+       "sfx": "angin lembut"
+      }
+     ],
+     [
+      {
+       "text": "layan",
+       "sty": "asas",
+       "size": "S",
+       "t": 9.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "view,",
+       "sty": "santai",
+       "size": "M",
+       "t": 9.75,
+       "d": 0.25,
+       "cat": "Santai / alam",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float naik",
+       "sfx": "angin lembut"
+      }
+     ]
+    ],
+    "t0": 7.25,
+    "t1": 10.25
+   },
+   {
+    "id": "1.4",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "duk je",
+       "sty": "asas",
+       "size": "S",
+       "t": 10.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "LANE KIRI !!!",
+       "sty": "kunci",
+       "size": "XL",
+       "arrow": "L",
+       "sfx": "bass hit + anak panah ← dilukis",
+       "t": 11.25,
+       "d": 0.75,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME"
+      }
+     ]
+    ],
+    "t0": 10.75,
+    "t1": 12.25
+   },
+   {
+    "id": "1.5",
+    "cam": "M4 whip pan ke KANAN (tukar lorong)",
+    "lines": [
+     [
+      {
+       "text": "DK SOH",
+       "sty": "larangan",
+       "size": "M",
+       "strike": true,
+       "t": 12.75,
+       "d": 0.5,
+       "cat": "Larangan",
+       "font": "Anton",
+       "col": "V-RED",
+       "motion": "M2 pop + pangkah (M9)",
+       "sfx": "buzz + pen"
+      }
+     ],
+     [
+      {
+       "text": "BENG GALOK",
+       "sty": "lucu",
+       "size": "M",
+       "t": 13.25,
+       "d": 0.5,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble",
+       "sfx": "boing"
+      }
+     ],
+     [
+      {
+       "text": "GATAL GELENYAAA",
+       "sty": "lucu",
+       "size": "M",
+       "stretch": true,
+       "t": 13.75,
+       "d": 1.0,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble + Stretch M12",
+       "sfx": "boing"
+      }
+     ],
+     [
+      {
+       "text": "LAAA NYAAAA",
+       "sty": "info",
+       "size": "S",
+       "color": "INK",
+       "stretch": true,
+       "t": 14.75,
+       "d": 0.75,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "swipe"
+      }
+     ]
+    ],
+    "t0": 12.75,
+    "t1": 15.75
+   },
+   {
+    "id": "1.6",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "NK DUK",
+       "sty": "asas",
+       "size": "S",
+       "t": 16.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "LANE KANAN",
+       "sty": "marah",
+       "size": "XL",
+       "arrow": "R",
+       "t": 16.75,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "!!!!!!",
+       "sty": "marah",
+       "size": "M",
+       "motion": "Pop satu-satu",
+       "t": 17.5,
+       "d": 0.25,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "sfx": "distorted hit"
+      }
+     ]
+    ],
+    "t0": 16.25,
+    "t1": 18.0
+   },
+   {
+    "id": "1.7",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "dk sume org",
+       "sty": "asas",
+       "size": "S",
+       "t": 18.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "yg lalu situ",
+       "sty": "asas",
+       "size": "S",
+       "t": 19.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "sbb nk layan",
+       "sty": "asas",
+       "size": "S",
+       "t": 19.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "angin pata",
+       "sty": "santai",
+       "size": "M",
+       "t": 20.0,
+       "d": 0.5,
+       "cat": "Santai / alam",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float naik",
+       "sfx": "angin lembut"
+      }
+     ],
+     [
+      {
+       "text": "mcm ge mu !!",
+       "sty": "lucu",
+       "size": "M",
+       "motion": "Wobble + kenyit",
+       "t": 20.5,
+       "d": 0.5,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "sfx": "boing"
+      }
+     ]
+    ],
+    "t0": 18.5,
+    "t1": 21.25
+   },
+   {
+    "id": "1.8",
+    "cam": "M7 pan ke atas (laju)",
+    "lines": [
+     [
+      {
+       "text": "ada lgi yg lalu situ",
+       "sty": "asas",
+       "size": "S",
+       "t": 21.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "sbb nk gi",
+       "sty": "asas",
+       "size": "S",
+       "t": 22.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "keje,",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 22.75,
+       "d": 0.25,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "nk gi",
+       "sty": "asas",
+       "size": "S",
+       "t": 23.0,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "settle urusan",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "t": 23.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "bandor nung,",
+       "sty": "tempat",
+       "size": "M",
+       "t": 23.75,
+       "d": 0.5,
+       "cat": "Tempat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M2 pop",
+       "sfx": "pop"
+      }
+     ],
+     [
+      {
+       "text": "dan sbgainyaaa !!!",
+       "sty": "info",
+       "size": "S",
+       "color": "INK",
+       "stretch": true,
+       "t": 24.25,
+       "d": 1.0,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "swipe"
+      }
+     ]
+    ],
+    "t0": 21.75,
+    "t1": 25.5
+   },
+   {
+    "id": "1.9",
+    "cam": "M8 rotate 90° (klimaks)",
+    "lines": [
+     [
+      {
+       "text": "EEEEEEEEEEE",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "sfx": "riser + jeritan sintetik naik",
+       "t": 26.0,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB + Stretch M12"
+      }
+     ],
+     [
+      {
+       "text": "GERAM",
+       "sty": "marah",
+       "size": "XL",
+       "sfx": "distorted hit + ducking",
+       "t": 26.75,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB"
+      }
+     ],
+     [
+      {
+       "text": "LAAAAAA",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "t": 27.5,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB + Stretch M12",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "HAKUUUUUU !!!",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "sfx": "impact + hard cut M11",
+       "t": 28.25,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB + Stretch M12"
+      }
+     ]
+    ],
+    "t0": 26.0,
+    "t1": 29.25
+   },
+   {
+    "id": "2.1",
+    "cam": "M11 hard cut (sambung bahagian)",
+    "lines": [
+     [
+      {
+       "text": "Pstuuuu",
+       "sty": "info",
+       "size": "M",
+       "color": "INK",
+       "stretch": true,
+       "t": 29.5,
+       "d": 0.75,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "yg nk",
+       "sty": "asas",
+       "size": "S",
+       "t": 30.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "ambk gmbr",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "emoji": "📸",
+       "t": 30.5,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "kt",
+       "sty": "asas",
+       "size": "S",
+       "t": 31.0,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "tepi",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "t": 31.25,
+       "d": 0.25,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      },
+      {
+       "text": "ke,",
+       "sty": "asas",
+       "size": "S",
+       "t": 31.5,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "tgh jalan",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "t": 31.75,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      },
+      {
+       "text": "ke",
+       "sty": "asas",
+       "size": "S",
+       "t": 32.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "apa sume tu.",
+       "sty": "asas",
+       "size": "S",
+       "t": 32.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ]
+    ],
+    "t0": 29.5,
+    "t1": 33.25
+   },
+   {
+    "id": "2.2",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "MITOKKK",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "motion": "Stretch (M12), tanpa shake",
+       "t": 33.75,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "TLG SANGAT",
+       "sty": "info",
+       "size": "S",
+       "color": "INK",
+       "t": 34.5,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "GUNA OTOK",
+       "sty": "kunci",
+       "size": "XL",
+       "t": 35.0,
+       "d": 0.75,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME",
+       "sfx": "bass hit"
+      }
+     ],
+     [
+      {
+       "text": "SKIT",
+       "sty": "info",
+       "size": "M",
+       "color": "V-VIOLET",
+       "emoji": "🤏🏻",
+       "t": 35.75,
+       "d": 0.25,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-VIOLET",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ]
+    ],
+    "t0": 33.75,
+    "t1": 36.25
+   },
+   {
+    "id": "2.3",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "jgn",
+       "sty": "larangan",
+       "size": "M",
+       "strike": true,
+       "t": 36.75,
+       "d": 0.25,
+       "cat": "Larangan",
+       "font": "Anton",
+       "col": "V-RED",
+       "motion": "M2 pop + pangkah (M9)",
+       "sfx": "buzz + pen"
+      },
+      {
+       "text": "wk mcm",
+       "sty": "asas",
+       "size": "S",
+       "t": 37.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "sume",
+       "sty": "asas",
+       "size": "S",
+       "t": 37.5,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "kete motor",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 37.75,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "akn",
+       "sty": "asas",
+       "size": "S",
+       "t": 38.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "brhnti",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "t": 38.5,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "ke kita untuk tnggu",
+       "sty": "asas",
+       "size": "S",
+       "t": 39.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "deme sume",
+       "sty": "asas",
+       "size": "S",
+       "t": 39.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "ambk gmbr !!",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 40.0,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ]
+    ],
+    "t0": 36.75,
+    "t1": 40.75
+   },
+   {
+    "id": "2.4",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "EHH TLG LAAA !!",
+       "sty": "marah",
+       "size": "M",
+       "t": 41.25,
+       "d": 0.5,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "ku turun motor,",
+       "sty": "asas",
+       "size": "S",
+       "t": 41.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "ku debikkkkk",
+       "sty": "lucu",
+       "size": "M",
+       "stretch": true,
+       "sfx": "boing + \"pow\" kartun",
+       "t": 42.25,
+       "d": 0.75,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble + Stretch M12"
+      }
+     ],
+     [
+      {
+       "text": "kang haaa !!",
+       "sty": "lucu",
+       "size": "M",
+       "t": 43.0,
+       "d": 0.5,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble",
+       "sfx": "boing"
+      }
+     ]
+    ],
+    "t0": 41.25,
+    "t1": 43.75
+   },
+   {
+    "id": "2.5",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "EEEE",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "t": 44.25,
+       "d": 0.5,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB + Stretch M12",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "BYK KALI SNGT",
+       "sty": "marah",
+       "size": "M",
+       "t": 44.75,
+       "d": 0.5,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "EYHHH",
+       "sty": "info",
+       "size": "S",
+       "color": "INK",
+       "stretch": true,
+       "t": 45.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "JUPE HK PESENG GNI !!",
+       "sty": "marah",
+       "size": "M",
+       "t": 45.75,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB",
+       "sfx": "distorted hit"
+      }
+     ]
+    ],
+    "t0": 44.25,
+    "t1": 46.75
+   },
+   {
+    "id": "2.6",
+    "cam": "M7 pan ke atas (lebih perlahan)",
+    "lines": [
+     [
+      {
+       "text": "dk maroh pn",
+       "sty": "positif",
+       "size": "M",
+       "t": 47.25,
+       "d": 0.5,
+       "cat": "Positif / setuju",
+       "font": "Inter Black",
+       "col": "V-GREEN",
+       "motion": "M2 pop + ✓ dilukis",
+       "sfx": "ding"
+      }
+     ],
+     [
+      {
+       "text": "nk",
+       "sty": "asas",
+       "size": "S",
+       "t": 47.75,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "ambk gmbr,",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 48.0,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "ambk laaaa.",
+       "sty": "positif",
+       "size": "M",
+       "check": true,
+       "stretch": true,
+       "t": 48.5,
+       "d": 0.75,
+       "cat": "Positif / setuju",
+       "font": "Inter Black",
+       "col": "V-GREEN",
+       "motion": "M2 pop + ✓ dilukis + Stretch M12",
+       "sfx": "ding"
+      }
+     ]
+    ],
+    "t0": 47.25,
+    "t1": 49.5
+   },
+   {
+    "id": "2.7",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "tpi",
+       "sty": "kunci",
+       "size": "M",
+       "t": 50.0,
+       "d": 0.25,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME",
+       "sfx": "bass hit"
+      }
+     ],
+     [
+      {
+       "text": "mntk tlg sngt !!",
+       "sty": "info",
+       "size": "S",
+       "color": "INK",
+       "t": 50.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "syg ke nyawa tek !!",
+       "sty": "soalan",
+       "size": "M",
+       "t": 50.75,
+       "d": 0.75,
+       "cat": "Soalan / sindiran",
+       "font": "Inter Bold Italic",
+       "col": "V-VIOLET",
+       "motion": "Condong masuk + ? melantun",
+       "sfx": "bloop"
+      }
+     ]
+    ],
+    "t0": 50.0,
+    "t1": 51.75
+   },
+   {
+    "id": "2.8",
+    "cam": "M8 rotate 90° (klimaks)",
+    "lines": [
+     [
+      {
+       "text": "NYAWAAAAA",
+       "sty": "kunci",
+       "size": "XL",
+       "stretch": true,
+       "sfx": "riser → bass hit",
+       "t": 52.25,
+       "d": 0.75,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME + Stretch M12"
+      }
+     ],
+     [
+      {
+       "text": "ORG LAIN",
+       "sty": "kunci",
+       "size": "M",
+       "t": 53.0,
+       "d": 0.5,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME",
+       "sfx": "bass hit"
+      }
+     ],
+     [
+      {
+       "text": "LAAAA !!",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "t": 53.5,
+       "d": 0.5,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB + Stretch M12",
+       "sfx": "distorted hit"
+      }
+     ]
+    ],
+    "t0": 52.25,
+    "t1": 54.25
+   },
+   {
+    "id": "2.9",
+    "cam": "M7 pan perlahan; muzik berhenti",
+    "lines": [
+     [
+      {
+       "text": "sbb klau",
+       "sty": "asas",
+       "size": "S",
+       "t": 54.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "kena",
+       "sty": "cemas",
+       "size": "M",
+       "t": 55.25,
+       "d": 0.5,
+       "cat": "Cemas / bahaya",
+       "font": "Special Elite",
+       "col": "V-VIOLET",
+       "motion": "Jitter / flicker",
+       "sfx": "heartbeat"
+      }
+     ],
+     [
+      {
+       "text": "tuuu,",
+       "sty": "asas",
+       "size": "S",
+       "stretch": true,
+       "t": 55.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "bkn mu sorang",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 56.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "hk",
+       "sty": "asas",
+       "size": "S",
+       "t": 56.75,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "boleh sakit !!",
+       "sty": "cemas",
+       "size": "M",
+       "sfx": "heartbeat ×2 → senyap",
+       "t": 57.0,
+       "d": 0.5,
+       "cat": "Cemas / bahaya",
+       "font": "Special Elite",
+       "col": "V-VIOLET",
+       "motion": "Jitter / flicker"
+      }
+     ]
+    ],
+    "t0": 54.75,
+    "t1": 57.75
+   },
+   {
+    "id": "3.1",
+    "cam": "M11 hard cut (sambung bahagian)",
+    "lines": [
+     [
+      {
+       "text": "Pstu",
+       "sty": "asas",
+       "size": "S",
+       "t": 58.0,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "orkkk",
+       "sty": "info",
+       "size": "S",
+       "color": "INK",
+       "stretch": true,
+       "t": 58.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "swipe"
+      },
+      {
+       "text": "hk peseng",
+       "sty": "asas",
+       "size": "S",
+       "t": 58.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "brahi brhnti",
+       "sty": "terkejut",
+       "size": "M",
+       "t": 59.25,
+       "d": 0.5,
+       "cat": "Terkejut / brek",
+       "font": "Rubik Black",
+       "col": "INK",
+       "motion": "Zoom punch-in + blok V-YELLOW",
+       "sfx": "brek tayar (screech)"
+      }
+     ],
+     [
+      {
+       "text": "tghhh jalan !!",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "stretch": true,
+       "t": 59.75,
+       "d": 0.75,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "swipe"
+      }
+     ]
+    ],
+    "t0": 58.0,
+    "t1": 60.75
+   },
+   {
+    "id": "3.2",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "lgi²",
+       "sty": "asas",
+       "size": "S",
+       "t": 61.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "kt",
+       "sty": "asas",
+       "size": "S",
+       "t": 61.5,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "kg cina",
+       "sty": "tempat",
+       "size": "M",
+       "t": 61.75,
+       "d": 0.5,
+       "cat": "Tempat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M2 pop",
+       "sfx": "pop"
+      },
+      {
+       "text": "nuh.",
+       "sty": "asas",
+       "size": "S",
+       "t": 62.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ]
+    ],
+    "t0": 61.25,
+    "t1": 62.75
+   },
+   {
+    "id": "3.3",
+    "cam": "M7 pan perlahan; muzik low-pass",
+    "lines": [
+     [
+      {
+       "text": "ASTAGHFIRULLAH",
+       "sty": "tenang",
+       "size": "M",
+       "t": 63.25,
+       "d": 1.0,
+       "cat": "Tenang / istighfar",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float perlahan",
+       "sfx": "airy chime + muzik low-pass"
+      }
+     ]
+    ],
+    "t0": 63.25,
+    "t1": 64.5
+   },
+   {
+    "id": "3.4",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "supoh kata",
+       "sty": "asas",
+       "size": "S",
+       "t": 65.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "klau lalu situ",
+       "sty": "asas",
+       "size": "S",
+       "t": 65.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "mmg boleh",
+       "sty": "asas",
+       "size": "S",
+       "t": 66.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "pahala",
+       "sty": "positif",
+       "size": "M",
+       "t": 66.5,
+       "d": 0.5,
+       "cat": "Positif / setuju",
+       "font": "Inter Black",
+       "col": "V-GREEN",
+       "motion": "M2 pop + ✓ dilukis",
+       "sfx": "ding"
+      }
+     ],
+     [
+      {
+       "text": "istighfar,",
+       "sty": "tenang",
+       "size": "M",
+       "t": 67.0,
+       "d": 0.75,
+       "cat": "Tenang / istighfar",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float perlahan",
+       "sfx": "airy chime + muzik low-pass"
+      }
+     ],
+     [
+      {
+       "text": "zikir aje",
+       "sty": "tenang",
+       "size": "M",
+       "emoji": "😭",
+       "t": 67.75,
+       "d": 0.75,
+       "cat": "Tenang / istighfar",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float perlahan",
+       "sfx": "airy chime + muzik low-pass"
+      }
+     ]
+    ],
+    "t0": 65.0,
+    "t1": 68.75
+   },
+   {
+    "id": "3.5",
+    "cam": "M7 pan ke atas; muzik masuk semula",
+    "lines": [
+     [
+      {
+       "text": "demi",
+       "sty": "asas",
+       "size": "S",
+       "t": 69.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "gmbr",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 69.5,
+       "d": 0.25,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      },
+      {
+       "text": "org kata,",
+       "sty": "asas",
+       "size": "S",
+       "t": 69.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "mu boleh orkk",
+       "sty": "asas",
+       "size": "S",
+       "t": 70.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "PARKING",
+       "sty": "kunci",
+       "size": "XL",
+       "t": 70.75,
+       "d": 0.75,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME",
+       "sfx": "bass hit"
+      }
+     ],
+     [
+      {
+       "text": "TGH² JALAN !!",
+       "sty": "kunci",
+       "size": "M",
+       "t": 71.5,
+       "d": 0.5,
+       "cat": "Kata kunci",
+       "font": "Anton UPPERCASE",
+       "col": "V-VIOLET",
+       "motion": "M5 + blok V-LIME",
+       "sfx": "bass hit"
+      }
+     ]
+    ],
+    "t0": 69.25,
+    "t1": 72.25
+   },
+   {
+    "id": "3.6",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "mu napok dkkk",
+       "sty": "soalan",
+       "size": "M",
+       "stretch": true,
+       "t": 72.75,
+       "d": 0.75,
+       "cat": "Soalan / sindiran",
+       "font": "Inter Bold Italic",
+       "col": "V-VIOLET",
+       "motion": "Condong masuk + ? melantun + Stretch M12",
+       "sfx": "bloop"
+      }
+     ],
+     [
+      {
+       "text": "jalan tu",
+       "sty": "asas",
+       "size": "S",
+       "t": 73.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "sempit",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "motion": "Huruf dihimpit (squeeze)",
+       "sfx": "squeak",
+       "t": 74.0,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE"
+      }
+     ],
+     [
+      {
+       "text": "stare mana !!",
+       "sty": "soalan",
+       "size": "M",
+       "t": 74.5,
+       "d": 0.5,
+       "cat": "Soalan / sindiran",
+       "font": "Inter Bold Italic",
+       "col": "V-VIOLET",
+       "motion": "Condong masuk + ? melantun",
+       "sfx": "bloop"
+      }
+     ]
+    ],
+    "t0": 72.75,
+    "t1": 75.25
+   },
+   {
+    "id": "3.7",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "org sini plok",
+       "sty": "asas",
+       "size": "S",
+       "t": 75.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "kete bapok²",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 76.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "gong blake !!",
+       "sty": "info",
+       "size": "XL",
+       "color": "V-ORANGE",
+       "motion": "Membesar (scale 0.5→1.15→1)",
+       "sfx": "thump besar",
+       "t": 76.75,
+       "d": 0.75,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE"
+      }
+     ]
+    ],
+    "t0": 75.75,
+    "t1": 77.75
+   },
+   {
+    "id": "3.8",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "ALLAHUUU,",
+       "sty": "tenang",
+       "size": "M",
+       "stretch": true,
+       "t": 78.25,
+       "d": 1.0,
+       "cat": "Tenang / istighfar",
+       "font": "Quicksand SemiBold",
+       "col": "V-CYAN",
+       "motion": "Float perlahan + Stretch M12",
+       "sfx": "airy chime + muzik low-pass"
+      }
+     ],
+     [
+      {
+       "text": "rasa nk gi",
+       "sty": "asas",
+       "size": "S",
+       "t": 79.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "jek",
+       "sty": "lucu",
+       "size": "M",
+       "sfx": "hentakan kaki (stomp)",
+       "t": 79.75,
+       "d": 0.25,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble"
+      }
+     ],
+     [
+      {
+       "text": "atas tekok",
+       "sty": "lucu",
+       "size": "M",
+       "t": 80.0,
+       "d": 0.5,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble",
+       "sfx": "boing"
+      }
+     ],
+     [
+      {
+       "text": "sorang².",
+       "sty": "asas",
+       "size": "S",
+       "t": 80.5,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ]
+    ],
+    "t0": 78.25,
+    "t1": 81.25
+   },
+   {
+    "id": "3.9",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "phtu bila org",
+       "sty": "asas",
+       "size": "S",
+       "t": 81.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "tegur,",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 82.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "“jp eyhh jp eyh”.",
+       "sty": "bisikan",
+       "size": "M",
+       "t": 82.75,
+       "d": 0.75,
+       "cat": "Petikan / bisikan",
+       "font": "Inter Light Italic",
+       "col": "INK 60%",
+       "motion": "Typewriter perlahan",
+       "sfx": "tick perlahan"
+      }
+     ]
+    ],
+    "t0": 81.75,
+    "t1": 83.75
+   },
+   {
+    "id": "3.10",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "eeee rasa nk",
+       "sty": "asas",
+       "size": "S",
+       "stretch": true,
+       "t": 84.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up + Stretch M12",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "jek skali !!",
+       "sty": "lucu",
+       "size": "M",
+       "sfx": "stomp ×2",
+       "t": 84.75,
+       "d": 0.5,
+       "cat": "Lucu",
+       "font": "Bangers",
+       "col": "V-ORANGE",
+       "motion": "Wobble"
+      }
+     ],
+     [
+      {
+       "text": "kita plok nk kne",
+       "sty": "asas",
+       "size": "S",
+       "t": 85.25,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "tunggu ye !!",
+       "sty": "info",
+       "size": "M",
+       "color": "V-MAGENTA",
+       "motion": "Huruf muncul sangat perlahan (menunggu)",
+       "sfx": "jam berdetik",
+       "t": 85.75,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-MAGENTA"
+      }
+     ]
+    ],
+    "t0": 84.25,
+    "t1": 86.5
+   },
+   {
+    "id": "3.11",
+    "cam": "M7 pan ke atas",
+    "lines": [
+     [
+      {
+       "text": "pstu hk jenis napok",
+       "sty": "asas",
+       "size": "S",
+       "t": 87.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "port ambk gmbr",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "t": 87.5,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "motion": "M3 slide-up",
+       "sfx": "swipe"
+      },
+      {
+       "text": "skit,",
+       "sty": "asas",
+       "size": "S",
+       "t": 88.0,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      }
+     ],
+     [
+      {
+       "text": "papppp",
+       "sty": "terkejut",
+       "size": "M",
+       "stretch": true,
+       "t": 88.25,
+       "d": 0.75,
+       "cat": "Terkejut / brek",
+       "font": "Rubik Black",
+       "col": "INK",
+       "motion": "Zoom punch-in + blok V-YELLOW + Stretch M12",
+       "sfx": "brek tayar (screech)"
+      }
+     ],
+     [
+      {
+       "text": "berhenti !!",
+       "sty": "terkejut",
+       "size": "M",
+       "t": 89.0,
+       "d": 0.5,
+       "cat": "Terkejut / brek",
+       "font": "Rubik Black",
+       "col": "INK",
+       "motion": "Zoom punch-in + blok V-YELLOW",
+       "sfx": "brek tayar (screech)"
+      }
+     ]
+    ],
+    "t0": 87.0,
+    "t1": 89.75
+   },
+   {
+    "id": "3.12",
+    "cam": "M7 pan ke atas (laju, 3 soalan)",
+    "lines": [
+     [
+      {
+       "text": "signal",
+       "sty": "info",
+       "size": "M",
+       "color": "V-ORANGE",
+       "motion": "Berkelip macam lampu signal ×2",
+       "sfx": "tik-tok signal",
+       "t": 90.25,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-ORANGE"
+      }
+     ],
+     [
+      {
+       "text": "kete mu",
+       "sty": "asas",
+       "size": "S",
+       "t": 90.75,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "haus ke ?",
+       "sty": "soalan",
+       "size": "M",
+       "t": 91.25,
+       "d": 0.5,
+       "cat": "Soalan / sindiran",
+       "font": "Inter Bold Italic",
+       "col": "V-VIOLET",
+       "motion": "Condong masuk + ? melantun",
+       "sfx": "bloop"
+      }
+     ],
+     [
+      {
+       "text": "side mirror",
+       "sty": "info",
+       "size": "M",
+       "color": "V-BLUE",
+       "motion": "Terbalik cermin → normal (flip)",
+       "sfx": "swish",
+       "t": 91.75,
+       "d": 0.5,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE"
+      }
+     ],
+     [
+      {
+       "text": "mu",
+       "sty": "asas",
+       "size": "S",
+       "t": 92.25,
+       "d": 0.25,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "patoh ke ?",
+       "sty": "soalan",
+       "size": "M",
+       "t": 92.5,
+       "d": 0.5,
+       "cat": "Soalan / sindiran",
+       "font": "Inter Bold Italic",
+       "col": "V-VIOLET",
+       "motion": "Condong masuk + ? melantun",
+       "sfx": "bloop"
+      }
+     ],
+     [
+      {
+       "text": "pah dk napok",
+       "sty": "asas",
+       "size": "S",
+       "t": 93.0,
+       "d": 0.5,
+       "cat": "Penghubung",
+       "font": "Inter Medium",
+       "col": "INK",
+       "motion": "M3 slide-up",
+       "sfx": "soft swipe"
+      },
+      {
+       "text": "org alik lakang",
+       "sty": "info",
+       "size": "S",
+       "color": "V-BLUE",
+       "motion": "Muncul dari belakang (scale 0.3→1)",
+       "t": 93.5,
+       "d": 0.75,
+       "cat": "Maklumat",
+       "font": "Inter Black",
+       "col": "V-BLUE",
+       "sfx": "swipe"
+      }
+     ],
+     [
+      {
+       "text": "ni ada ke dk ?",
+       "sty": "soalan",
+       "size": "M",
+       "t": 94.25,
+       "d": 0.5,
+       "cat": "Soalan / sindiran",
+       "font": "Inter Bold Italic",
+       "col": "V-VIOLET",
+       "motion": "Condong masuk + ? melantun",
+       "sfx": "bloop"
+      }
+     ]
+    ],
+    "t0": 90.25,
+    "t1": 95.0
+   },
+   {
+    "id": "3.13",
+    "cam": "M8 rotate 90° (klimaks akhir)",
+    "lines": [
+     [
+      {
+       "text": "EEE",
+       "sty": "marah",
+       "size": "M",
+       "stretch": true,
+       "t": 95.5,
+       "d": 0.5,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB + Stretch M12",
+       "sfx": "distorted hit"
+      }
+     ],
+     [
+      {
+       "text": "JEK SKALI",
+       "sty": "marah",
+       "size": "XL",
+       "sfx": "stomp + distorted hit",
+       "t": 96.0,
+       "d": 0.75,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB"
+      }
+     ],
+     [
+      {
+       "text": "BRU TAU !!",
+       "sty": "marah",
+       "size": "M",
+       "sfx": "impact + hard cut M11",
+       "t": 96.75,
+       "d": 0.5,
+       "cat": "Marah / geram",
+       "font": "Anton UPPERCASE",
+       "col": "V-RED",
+       "motion": "Shake + glitch RGB"
+      }
+     ]
+    ],
+    "t0": 95.5,
+    "t1": 97.5
+   }
+  ],
+  "offsets": [
+   0.0,
+   29.25,
+   57.75
+  ],
+  "cta": 97.5,
+  "dur": 99.0,
+  "emoji": 4,
+  "wm": ""
+ }
+]
